@@ -1,0 +1,49 @@
+graph TD
+    %% Node Definitions
+    R["Problems of<br/>Explainable AI"]
+    
+    A1["Socio-Ethical &<br/>Commercial<br/>Barriers"]
+    A2["Technical &<br/>Methodological<br/>Issues"]
+    
+    B1["Lack of Trust &<br/>Transparency"]
+    B2["Conflict of<br/>Responsibility"]
+    B3["Proprietary<br/>Secrecy"]
+    B4["Model Fragility"]
+    B5["Low Explanation<br/>Fidelity"]
+    B6["Cognitive Limits<br/>& Trade-Off<br/>Fallacy"]
+    
+    C1["Profit Without<br/>Accountability<br/>for AI Errors"]
+    C2["Complicated<br/>Black Boxes<br/>Protected for<br/>Commercial Gain"]
+    C3["Minor Setting<br/>Shifts<br/>Substantially<br/>Reduce Accuracy"]
+    C4["Post-Hoc<br/>Approximations<br/>Lack Full Model<br/>Fidelity"]
+    C5["Human Inability<br/>to Digest<br/>Thousands of<br/>Parameters"]
+
+    %% Connections
+    R --> A1
+    R --> A2
+    
+    A1 --> B1
+    A1 --> B2
+    A1 --> B3
+    
+    A2 --> B4
+    A2 --> B5
+    A2 --> B6
+    
+    B2 --> C1
+    B3 --> C2
+    B4 --> C3
+    B5 --> C4
+    B6 --> C5
+
+    %% Style Classes
+    classDef root fill:#1C2434,stroke:#1C2434,color:#FFFFFF,font-weight:bold;
+    classDef level1 fill:#2563EB,stroke:#2563EB,color:#FFFFFF,font-weight:bold;
+    classDef level2 fill:#475569,stroke:#475569,color:#FFFFFF,font-weight:bold;
+    classDef leaf fill:#F8FAFC,stroke:#CBD5E1,color:#1E293B,font-weight:bold;
+
+    %% Apply Classes
+    class R root;
+    class A1,A2 level1;
+    class B1,B2,B3,B4,B5,B6 level2;
+    class C1,C2,C3,C4,C5 leaf;

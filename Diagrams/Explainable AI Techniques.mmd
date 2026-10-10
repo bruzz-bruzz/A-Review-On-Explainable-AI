@@ -1,0 +1,38 @@
+graph TD
+    %% Nodes
+    R["Explainable AI<br/>Techniques"]
+    
+    A1["Intrinsic / Ante-<br/>Hoc"]
+    A2["Post-Hoc<br/>Explanations"]
+    
+    B1["Local Feature<br/>Attribution"]
+    B2["Global & Black<br/>Box Surrogates"]
+    
+    C1["<b style='color:#0F172A;'>Genetic<br/>Programming &<br/>Decision Trees</b><br/><i style='color:#0F172A;'><b>(Inherently<br/>Interpretable)</b></i>"]
+    C2["<b style='color:#0F172A;'>LIME</b><br/><i style='color:#0F172A;'><b>(Local<br/>Interpretable<br/>Model-agnostic)</b></i>"]
+    C3["<b style='color:#0F172A;'>SHAP</b><br/><i style='color:#0F172A;'><b>(SHapley<br/>Additive<br/>exPlanations)</b></i>"]
+    C4["<b style='color:#0F172A;'>Open the Black<br/>Box Methods</b><br/><i style='color:#0F172A;'><b>(Transparent<br/>Box Design &<br/>Surrogates)</b></i>"]
+
+    %% Connections
+    R --> A1
+    R --> A2
+    
+    A1 --> C1
+    A2 --> B1
+    A2 --> B2
+    
+    B1 --> C2
+    B1 --> C3
+    B2 --> C4
+
+    %% Class Styles
+    classDef root fill:#1A2332,stroke:#1A2332,color:#FFFFFF,font-weight:bold;
+    classDef level1 fill:#3B82F6,stroke:#3B82F6,color:#FFFFFF,font-weight:bold;
+    classDef level2 fill:#52647C,stroke:#52647C,color:#FFFFFF,font-weight:bold;
+    classDef leaf fill:#F8FAFC,stroke:#D1D5DB,stroke-width:2px,color:#0F172A;
+
+    %% Apply Classes
+    class R root;
+    class A1,A2 level1;
+    class B1,B2 level2;
+    class C1,C2,C3,C4 leaf;
