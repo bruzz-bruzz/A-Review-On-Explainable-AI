@@ -1,43 +1,16 @@
 graph TD
-    %% Node Definitions
-    R["Explainable AI<br/>Uses"]
-    
-    A1["Development &<br/>Debugging"]
-    A2["Building Human<br/>Trust"]
-    A3["High-Stakes<br/>Scenarios"]
-    
-    B1["Proper<br/>Evaluation<br/>Process"]
-    B2["Identifying<br/>Biases"]
-    
-    C1["Testing on Real-<br/>World Data"]
-    C2["Ideas for Model<br/>Improvement"]
-    C3["Verifying<br/>Feature Reliance"]
-    C4["Greater Model<br/>Understanding"]
-    C5["Application-<br/>Grounded<br/>Evaluation in<br/>Hospitals"]
+    Root["Explainable AI Uses"] --> Dev["Development & Debugging"]
+    Root --> Trust["Building Human Trust"]
+    Root --> HighStakes["High-Stakes Scenarios"]
 
-    %% Connections
-    R --> A1
-    R --> A2
-    R --> A3
-    
-    A1 --> B1
-    A1 --> B2
-    
-    A2 --> C4
-    A3 --> C5
-    
-    B1 --> C1
-    B1 --> C2
-    B2 --> C3
+    Dev --> Eval["Proper Evaluation Process"]
+    Dev --> Biases["Identifying Biases"]
 
-    %% Style Classes
-    classDef root fill:#1C2434,stroke:#1C2434,color:#FFFFFF,font-weight:bold;
-    classDef level1 fill:#2563EB,stroke:#2563EB,color:#FFFFFF,font-weight:bold;
-    classDef level2 fill:#475569,stroke:#475569,color:#FFFFFF,font-weight:bold;
-    classDef leaf fill:#F8FAFC,stroke:#CBD5E1,color:#1E293B,font-weight:bold;
+    Eval --> Test["Testing on Real-World Data"]
+    Eval --> Ideas["Ideas for Model Improvement"]
 
-    %% Apply Classes
-    class R root;
-    class A1,A2,A3 level1;
-    class B1,B2 level2;
-    class C1,C2,C3,C4,C5 leaf;
+    Biases --> Verify["Verifying Feature Reliance"]
+
+    Trust --> Understand["Greater Model Understanding"]
+
+    HighStakes --> Hosp["Application-Grounded Evaluation in Hospitals"]
